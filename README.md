@@ -21,7 +21,21 @@ omarchy theme install https://github.com/squatchware/omarchy-phosphor-green-them
 - **Wallpapers**, drawn at the machine's own resolution and scaled up with no smoothing:
 - `01-boot.jpg`
 - `02-treeline.jpg`
-- **Lock screen** wordmark (`unlock.png`).
+- **Boot splash and lock screen** (`unlock.png`): the machine's own start-up screen.
+- **Screensaver** art (`screensaver.txt`), animated by Omarchy's screensaver.
+
+## Extras
+
+The screensaver and boot splash need one command each (the second asks for sudo):
+
+```sh
+~/.config/omarchy/themes/phosphor-green/extras/install-extras.sh          # screensaver
+~/.config/omarchy/themes/phosphor-green/extras/install-extras.sh --boot   # + boot splash
+```
+
+The screensaver hook is shared by every Squatchware theme: it uses the active theme's art and
+puts your own back when you switch to a theme without any. The boot splash stays until you run
+`omarchy plymouth set by theme <name>` for another theme.
 
 ## The rest of the pack
 
